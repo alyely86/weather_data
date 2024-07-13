@@ -11,7 +11,7 @@ header_row = next(reader)
 # Extract high temperatures.
 highs = []
 for row in reader:
-    high = int(row[2])
+    high = int(row[4])
     highs.append(high)
 
 print(highs) 
