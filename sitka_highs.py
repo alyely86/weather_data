@@ -7,4 +7,11 @@ lines = path.read_text().splitlines()
 
 reader = csv.reader(lines)
 header_row = next(reader)
-print(header_row)
+
+# Extract high temperatures.
+highs = []
+for row in reader:
+    high = int(row[2])
+    highs.append(high)
+
+print(highs) 
